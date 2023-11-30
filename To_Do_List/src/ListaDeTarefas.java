@@ -1,9 +1,8 @@
-import java.sql.SQLOutput;
 import java.util.*;
 
 public class ListaDeTarefas {
-    private List<Tarefa> tarefas;
-    private Set<String> categoriasValidas;
+    private final List<Tarefa> tarefas;
+    private final Set<String> categoriasValidas;
 
 
     public ListaDeTarefas() {
@@ -16,6 +15,7 @@ public class ListaDeTarefas {
             Tarefa novaTarefa = new Tarefa(titulo, descricao, categoria);
             tarefas.add(novaTarefa);
             System.out.println("Tarefa adicionada: " + titulo);
+
         } else {
             System.out.println("Categoria inválida. Escolha uma das categorias padronizadas.");
         }
@@ -52,7 +52,7 @@ public class ListaDeTarefas {
 
     public void exibirTarefasTerminadas() {
         boolean tarefasTerminadas = false;
-        System.out.println("Tarefas Em Concluidas");
+        System.out.println("Tarefas Concluídas:");
         for (Tarefa tarefa : tarefas) {
             if (tarefa.isConcluida()) {
                 System.out.println("\nTarefa:\n" + tarefa);
@@ -83,7 +83,7 @@ public class ListaDeTarefas {
         boolean tarefasEmAberto = false;
         System.out.println("Tarefas Em Aberto:");
         for (Tarefa tarefa : tarefas) {
-            if (tarefa.isConcluida()) {
+            if (!tarefa.isConcluida()) {  // Corrected condition
                 System.out.println("\nTarefa:\n" + tarefa);
                 tarefasEmAberto = true;
             }
@@ -93,4 +93,4 @@ public class ListaDeTarefas {
             System.out.println("Você não tem tarefas em aberto");
         }
     }
-    }
+}

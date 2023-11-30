@@ -1,7 +1,7 @@
 public class Tarefa {
-    private String titulo;
-    private String descricao;
-    private String categoria;
+    private final String titulo;
+    private final String descricao;
+    private final String categoria;
     private boolean concluida;
 
     public Tarefa(String titulo, String descricao, String categoria){
@@ -9,14 +9,6 @@ public class Tarefa {
         this.descricao = descricao;
         this.categoria = categoria;
         this.concluida = false;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
     }
 
     public String getCategoria() {

@@ -36,12 +36,10 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return "Tarefas{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", categoria='" + categoria + '\'' +
-                ", concluida=" + concluida +
-                '}';
+        return "titulo= " + titulo +
+                "\ndescricao=" + descricao +
+                "\ncategoria=" + categoria +
+                "\nconcluida=" + concluida;
     }
 
 

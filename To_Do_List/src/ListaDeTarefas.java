@@ -52,7 +52,7 @@ public class ListaDeTarefas {
 
     public void exibirTarefasTerminadas() {
         boolean tarefasTerminadas = false;
-        System.out.println("Tarefas Concluídas:");
+        System.out.println("Tarefas Em Concluidas");
         for (Tarefa tarefa : tarefas) {
             if (tarefa.isConcluida()) {
                 System.out.println("\nTarefa:\n" + tarefa);

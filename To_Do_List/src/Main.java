@@ -8,16 +8,17 @@ public class Main {
 
         boolean continuar = true;
         while (continuar) {
-            System.out.println("\nTipos de lista: Lista de Compras, Lista de Tarefas, Lista de Estudos");
-            System.out.println("\nEscolha uma opção:");
-            System.out.println("1. Adicionar Tarefa");
-            System.out.println("2. Marcar Tarefa como Concluída");
-            System.out.println("3. Desmarcar Conclusão de Tarefa");
-            System.out.println("4. Exibir Todas as Tarefas");
-            System.out.println("5. Exibir Tarefas em Aberto");
-            System.out.println("6. Exibir Tarefas Concluídas");
-            System.out.println("7. Exibir Tarefas por Categoria");
-            System.out.println("8. Sair");
+            System.out.println("*********************************************************************");
+            System.out.println("*                             Escolha uma opção:                    *");
+            System.out.println("* 1. Adicionar Tarefa                                               *");
+            System.out.println("* 2. Marcar Tarefa como Concluída                                   *");
+            System.out.println("* 3. Desmarcar Conclusão de Tarefa                                  *");
+            System.out.println("* 4. Exibir Todas as Tarefas                                        *");
+            System.out.println("* 5. Exibir Tarefas em Aberto                                       *");
+            System.out.println("* 6. Exibir Tarefas Concluídas                                      *");
+            System.out.println("* 7. Exibir Tarefas por Categoria                                   *");
+            System.out.println("* 8. Sair                                                           *");
+            System.out.println("*********************************************************************");
 
             int opcao = scanner.nextInt();
             scanner.nextLine();  // Consumir a quebra de linha pendente
@@ -45,6 +46,7 @@ public class Main {
                     listaDeTarefas.desmarcarTarefaConcluida(indiceDesmarcar - 1);
                     break;
                 case 4:
+                    System.out.println("                Tarefas");
                     listaDeTarefas.exibirTodasTarefas();
                     break;
                 case 5:
